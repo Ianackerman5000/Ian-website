@@ -150,8 +150,9 @@ nav ul li a:hover {
 .what-i-build { margin-top: 5px; font-size: 30px; }
 .quality-work { font-size: 20px; margin-top: 10px; }
 .name { font-size: 40px; }
+/*Partner button*/
 .partner-button {
-    width: 240px;
+    width: 250px;
     height: 40px;
     cursor: pointer;
     border-radius: 25px;
