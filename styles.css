@@ -1,5 +1,5 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden;}
 body {
   font-family: 'Poppins', sans-serif;
   background: #080808;
@@ -73,7 +73,7 @@ section { padding: 100px 0; position: relative; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 24px;
+  padding: 18px 20px;
   max-width: 1300px;
   margin: 0 auto;
 }
