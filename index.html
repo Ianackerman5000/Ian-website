@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <meta name="description" content="Portfolio of Ian Ackerman, a Front-end Developer based in Uganda. Specializing in responsive web design, HTML5, CSS3, and JavaScript.">
-    <title>IAN ACKERMAN | WEB DEVELOPER</title>
-    <!-- Standard favicon -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ian Ackerman — Software Developer based in Uganda. Building management systems, web apps  for businesses and organisations." />
+  <meta name="theme-color" content="#080808" />
+  <title>Ian Ackerman|Software Developer</title>
+  <!-- Standard favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
   <!-- PNG favicons (modern browsers) -->
@@ -23,205 +19,594 @@
   <!-- Android / Chrome -->
   <link rel="icon" type="image/png" sizes="192x192" href="FAVICON/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="FAVICON/android-chrome-512x512.png">
-    <link rel="stylesheet" href="style.css">
-</head>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
 
-    <!-- NAVIGATION BAR -->
-    <nav id="navigation-bar">
-        <div class="logo-div">
-            <h2 class="logo">IAN-ACKER</h2>
-        </div>
-        <div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo"><span class="dot">IAN-</span><span class="dot">ACKER</span></a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button id="hamburger-btn" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </nav>
 
-    <!-- Backdrop -->
-    <div class="nav-backdrop" id="nav-backdrop"></div>
+  <div id="nav-overlay"></div>
 
-    <!-- HOME SECTION -->
-    <section id="home" class="home-content">
-        <div class="profile-div" data-aos="zoom-in">
-            <img class="profile-image" src="Thumbnails/Screenshot_20260310-182536_Gallery.jpg" alt="Ian Ackerman">
+  <aside id="mobile-nav-drawer" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" style="color: var(--accent); font-weight:600;">Hire Me</a></li>
+    </ul>
+  </aside>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div id="particles-container">
+      <div class="glow-orb o1"></div>
+      <div class="glow-orb o2"></div>
+      <div class="glow-orb o3"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-image-wrap">
+          <img class="images-acker" src="Thumbnails/Screenshot_20260310-182536_Gallery.jpg" alt="Ian Ackerman" />
         </div>
-        <div class="home-section-text">
-            <h1 class="name" data-aos="fade-left" data-aos-delay="100">Hello, I'm</h1>
-            <h1 class="acker" data-aos="fade-left" data-aos-delay="200"><strong><span class="ian-dev">Ian-Ackerman</span></strong></h1>
-            <h2 class="what-i-build" data-aos="fade-left" data-aos-delay="300"><span id="typed"></span></h2>
-            <p class="quality-work" data-aos="fade-left" data-aos-delay="400">Building Software that runs your school, business or organisation</p>
-            <p class="quality-work" data-aos="fade-left" data-aos-delay="400">I understand your business first then I build exactly what it needs</p>
+        <div class="hero-text">
+          <div class="hero-badge"><span class="dot"></span> Open for projects · Uganda</div>
+          <div class="hero-role">Software Developer</div>
+          <h1 class="hero-name">Hello, I'm <span class="accent">Ian Ackerman</span></h1>
+          <div class="hero-typed"><span id="typed"></span></div>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">Contact Me <i class="fas fa-arrow-right"></i></a>
+            <a href="#projects" class="btn btn-outline">View My Work</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://ianackerman5000" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/ianackerman447" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/256777905801" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://x.com/@IanMujuni" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+            <a href="mujuniian352@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <a href="#contact">
-                <button class="partner-button">Contact Me</button>
-            </a>
-            <div class="social-icons">
-                <a href="https://github.com/ianackerman5000" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://instagram.com/ianackerman447" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/256785044956" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://x.com/@IanMujuni" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="mailto:mujuniian352@gmail.com" target="_blank" aria-label="Email Me">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
+  <!-- ===== STATS ===== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-label">BY THE NUMBERS</div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <i class="fas fa-rocket"></i>
+          <div class="stat-number" data-target="5" data-suffix="+">0</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-stopwatch"></i>
+          <div class="stat-number" data-target="2" data-suffix="+">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-handshake"></i>
+          <div class="stat-number" data-target="4">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-star"></i>
+          <div class="stat-number" data-target="95" data-suffix="%">0%</div>
+          <div class="stat-label">Satisfaction Rate</div>
+        </div>
+      </div>
+      <div class="stats-foot">Real numbers <span>·</span> Real results</div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container" data-aos="fade-up">
+      <div class="section-label">WHO I AM</div>
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+      <div class="title-underline"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm Ian Ackerman, a software developer based in Uganda. I build management systems, web apps and Professional Websites that solve real problems for schools, businesses and organisations.</p>
+          <p class="hero-desc">Building software that runs your business, school or organisation.</p>
+          <div class="about-quote"> I understand your business first — then I build exactly what it needs.</div>
+          <div class="about-quote">"Before I write a single line of code, I sit with you, understand your problem completely, then build exactly what solves it."</div>
+          <div class="skills-row">
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+            <span class="skill-pill">Firebase</span>
+            <span class="skill-pill">Digital Marketing</span>
+          </div>
+        </div>
+        <div class="about-cards">
+          <div class="about-mini-card">
+            <h1>2+</h1>
+            <p>Years of Building</p>
+          </div>
+          <div class="about-mini-card">
+            <h2>Full stack Developer</h2>
+            <p>Frontend & Backend</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">WHAT I DO</div>
+      <h2 class="section-title" data-aos="fade-up">My <span class="accent">Services</span></h2>
+      <div class="title-underline" data-aos="fade-up"></div>
+      <div class="services-list">
+        <div class="service-row" data-aos="fade-right" data-aos-delay="0">
+          <div class="service-icon"><i class="fas fa-desktop"></i></div>
+          <div class="service-body">
+            <h3>Software Development</h3>
+            <p>Management systems, web apps & Refactoring solutions for modern software development.</p>
+          </div>
+          <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="service-row" data-aos="fade-right" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-globe"></i></div>
+          <div class="service-body">
+            <h3>Website Development</h3>
+            <p>Building and Designing Professional Business websites & landing pages that convert.</p>
+          </div>
+          <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="service-row" data-aos="fade-right" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="service-body">
+            <h3>Digital Marketing</h3>
+            <p>Online presence, social media growth & strategy that help in businesses advertise.</p>
+          </div>
+          <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="service-row" data-aos="fade-right" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-wrench"></i></div>
+          <div class="service-body">
+            <h3>Tech Support</h3>
+            <p>System maintenance, troubleshooting & optimization.</p>
+          </div>
+          <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+        <div class="service-row" data-aos="fade-right" data-aos-delay="400">
+          <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="service-body">
+            <h3>Coding Mentorship</h3>
+            <p>HTML, CSS, JavaScript and Backend development mentorship for beginners.</p>
+          </div>
+          <div class="service-arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label text-center" data-aos="fade-up" style="display:block;">MY WORK</div>
+      <h2 class="section-title text-center" data-aos="fade-up">Featured <span class="accent">Projects</span></h2>
+      <p class="section-subtitle" data-aos="fade-up">A glimpse of systems built for real organisations.</p>
+      <div class="projects-grid">
+        <article class="project-card tilt-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-image pi-red">
+            <img src="Testimonials/digital-archive.jpg" alt="Kitetikka LMS" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
+            <div class="project-badge">PWA · Live</div>
+          </div>
+         <div class="project-body">
+          <h3>Ackerman Archive</h3>
+          <div class="project-sub">Personal File Repository System</div>
+          <p>A private, secure digital archive for storing, organizing and managing personal files. Features Google sign-in, course tracking, project management and progress analytics.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">JS</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Vercel</span>
+          </div>
+          <a href="https://ianackerman-archive.vercel.app/" class="project-link">View Project →</a>
+        </div>
+        </article>
+        <article class="project-card tilt-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="project-image pi-blue">
+            <img src="Testimonials/510161.jpg" alt="AFMS" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
+            <div class="project-badge">Web App · Live</div>
+          </div>
+          <div class="project-body">
+            <h3>AFMS</h3>
+            <div class="project-sub">Ackerman | Financial Management System</div>
+            <p>Premium financial platform for secure tracking, budgeting and reporting. Built for businesses that need reliable financial oversight.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">JS</span>
+              <span class="tech-tag">Vercel</span>
+              <span class="tech-tag">SheetJS</span>
             </div>
-        </div>
-    </section>
+            <a href="https://ackerman-supreme-financial-webapp.vercel.app/" class="project-link">View Project →</a>
+          </div>
+        </article>
+        <article class="project-card tilt-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-image pi-green">
+            <img src="Testimonials/1779747890277.png" alt="Elite High School" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />
+            <div class="project-badge">Digital Advert</div>
+          </div>
+          <div class="project-body">
+            <h3>Perfect Drinks</h3>
+            <div class="project-sub">Graphic Design & Advertising</div>
+            <p>Designed promotional advertising material for Perfect Cooking. This shows my ability to create bold, attention-grabbing visuals that market products and drive customer action.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">CANVA</span>
+              <span class="tech-tag">LOVART</span>
+            </div>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <!-- ABOUT ME SECTION -->
-    <section id="about" class="about-content">
-        <p class="more-information">Get to know more</p>
-        <p class="about-me">About Me</p>
-        <div class="about-main-div">
-            <div class="experience-div" data-aos="fade-right">
-                <div class="experience-logo-div">
-                    <img class="experience-logo" src="Thumbnails/Ultra-violet.png" alt="Experience">
-                </div>
-                <div>
-                    <h1 class="h1-3">Experience</h1>
-                    <p class="dev-time">2+ Years <br>Frontend Development</p>
-                </div>
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-label text-center" data-aos="fade-up" style="display:block;">KIND WORDS</div>
+      <h2 class="section-title text-center" data-aos="fade-up">Client <span class="accent">Testimonials</span></h2>
+      <p class="section-subtitle" data-aos="fade-up">What people I've worked with have to say.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card tilt-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="testimonial-head">
+            <img class="testimonial-avatar" src="Testimonials/Screenshot_20260416-215225_Gallery.jpg" alt="Lyra" />
+            <div>
+              <div class="testimonial-name">Lyra</div>
+              <div class="testimonial-role">Mentorship Student</div>
             </div>
-            <div class="skills-div" data-aos="fade-left">
-                <div class="skills-logo-div">
-                    <img class="skills-logo" src="Thumbnails/Forever-young.png" alt="Skills">
-                </div>
-                <div>
-                    <h1 class="h1-3">Skills</h1>
-                    <p class="dev-time">Crafting Code <br>&amp; Digital Art</p>
-                </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"I started with zero knowledge of web development. Ian guided me through the fundamentals of HTML/CSS with incredible patience. Thanks to his mentorship, I went from struggling with the basics to building my own fully responsive websites from scratch."</p>
+        </div>
+        <div class="testimonial-card tilt-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="testimonial-head">
+            <img class="testimonial-avatar" src="Testimonials/1767372392291.jpg" alt="Solomon" />
+            <div>
+              <div class="testimonial-name">Solomon</div>
+              <div class="testimonial-role">Business Client</div>
             </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"I required a sophisticated platform for my firm. Ian executed every phase of the development with exceptional precision. My company transitioned from zero visibility to launching a premier high-performance digital presence from scratch."</p>
         </div>
-        <div class="more-information-div2" data-aos="fade-up">
-            <p class="more-information2">I'm a frontend developer who loves the mix of clean code and creative design.</p>
-            <p class="more-information2">With over 2 years of experience, I specialize in taking complex ideas and turning</p>
-            <p class="more-information2">them into smooth, responsive websites using <span class="languages">HTML5, CSS3 and JavaScript.</span></p>
+        <div class="testimonial-card tilt-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-head">
+            <img class="testimonial-avatar" src="Testimonials/vlc_20251201_105125.jpg" alt="Author" />
+            <div>
+              <div class="testimonial-name">Vergil</div>
+              <div class="testimonial-role">Tech Support Client</div>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"My technical infrastructure was constantly failing my team. Ian resolved every issue within our systems with absolute efficiency. We transitioned from frequent system downtime to maintaining a fully optimized enterprise digital workspace."</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- TESTIMONIALS SECTION -->
-    <section id="testimonials" class="ultmate-testimonial-div">
-        <div class="word-header">
-            <h1 class="word">Testimonials</h1>
-        </div>
-        <div class="testimonials-section">
-            <div class="testimonial-div1 tilt-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="testimonial-profile-div">
-                    <img class="test-image" src="Testimonials/Screenshot_20260416-215225_Gallery.jpg" alt="Lyra">
-                </div>
-                <div class="names">Lyra</div>
-                <div class="test-stars">⭐⭐⭐⭐⭐</div>
-                <div class="real-testimony">
-                    I started with zero knowledge of web development,
-                    Ian guided me through the fundamentals of HTML/CSS
-                    with incredible patience. Thanks to his mentorship,
-                    I went from struggling with the basics to building
-                    my own fully responsive websites from scratch.
-                </div>
-            </div>
-            <div class="testimonial-div2 tilt-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="testimonial-profile-div">
-                    <img class="test-image2" src="Testimonials/1767372392291.jpg" alt="Solomon">
-                </div>
-                <div class="names">Solomon</div>
-                <div class="test-stars">⭐⭐⭐⭐⭐</div>
-                <div class="real-testimony">
-                    I required a sophisticated platform for my firm,
-                    Ian executed every phase of the development
-                    with exceptional precision. Through his expertise,
-                    my company transitioned from zero visibility to launching
-                    a premier high-performance digital presence from scratch.
-                </div>
-            </div>
-            <div class="testimonial-div3 tilt-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="testimonial-profile-div">
-                    <img class="test-image" src="Testimonials/vlc_20251201_105125.jpg" alt="Author">
-                </div>
-                <div class="names">Author</div>
-                <div class="test-stars">⭐⭐⭐⭐⭐</div>
-                <div class="real-testimony">
-                    My technical infrastructure was constantly failing my team,
-                    Ian resolved every issue within our systems
-                    with absolute efficiency. Through his proactive support,
-                    we transitioned from frequent system downtime to maintaining
-                    a fully optimized enterprise digital workspace.
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ===== CTA ===== -->
+  <section class="cta-section" data-aos="zoom-in">
+    <div class="container">
+      <div class="section-label">LET'S WORK TOGETHER</div>
+      <h2>Got a project in <span class="accent">mind?</span></h2>
+      <p>Let's turn your idea into working software.</p>
+      <div class="cta-buttons">
+        <a href="#contact" class="btn btn-primary">Start a Project <i class="fas fa-arrow-right"></i></a>
+        <a href="https://wa.me/256785044956" target="_blank" class="btn btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp Me</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section">
-        <div class="contant-me"><h1>CONTACT ME</h1></div>
-        <div class="wrapper-div" data-aos="zoom-in">
-            <form action="https://formspree.io/f/xjgjrvyk" method="POST" class="form">
-                <h2 class="h2">Send a message</h2>
-                <div class="input-box">
-                    <div class="input-text">
-                        <label for="fullnames">Enter Names</label>
-                        <input class="type" type="text" id="fullnames" placeholder="Full Name" name="fullnames" required>
-                    </div>
-                    <div class="input-email">
-                        <label for="tel">Tel. Number</label>
-                        <input class="tel" id="tel" type="tel" placeholder="Phone number" name="tel" required>
-                    </div>
-                    <div class="gender-div">
-                        <label for="gender" class="gender-label">Select Gender</label>
-                        <select id="gender" name="gender" class="gender-select" required>
-                            <option value="" disabled selected>Choose Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                        </select>
-                    </div>
-                    <div class="input-email">
-                        <label for="email">Email Address</label>
-                        <input id="email" class="email" type="email" placeholder="@gmail.com" name="email" required>
-                    </div>
-                    <div class="textarea">
-                        <label for="message" class="mes1">Your Message</label>
-                        <textarea class="message" id="message" name="message" rows="4" placeholder="How may I help you........" required></textarea>
-                    </div>
-                    <div class="submit-button-div">
-                        <button class="submit-button" type="submit">Send Message</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container" data-aos="fade-up">
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-div">
-            <div class="footer-logo-div">
-                <h2 class="footer-name">Ian-<span class="ackerman">Ackerman</span></h2>
+      <div class="section-label text-center" style="display:block;">GET IN TOUCH</div>
+      <h2 class="section-title text-center">Send Me a <span class="accent">Message</span></h2>
+      <p class="section-subtitle">Have a project or question? Fill in the form below and I'll get back to you shortly.</p>
+
+      <div class="contact-wrapper">
+
+        <!-- Left — info panel -->
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="contact-info-label">Location</div>
+              <div class="contact-info-value">Uganda</div>
             </div>
-            <div class="social-icons">
-                <a href="https://github.com/ianackerman5000" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://instagram.com/ianackerman" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/256785044956" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://x.com/ianackerman" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="mailto:mujuniian352@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-info-label">Emails</div>
+              <div class="contact-info-value">mujuni444ian@gmail.com</div>
+              <div class="contact-info-value">mujuniian352@gmail.com</div>
             </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2026 Ian-Ackerman. All Rights Reserved.</p>
-        </div>
-    </footer>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <div class="contact-info-label">WhatsApp</div>
+              <div class="contact-info-value">+256 785 044 956</div>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="contact-info-label">Response Time</div>
+              <div class="contact-info-value">Within 24 hours</div>
+            </div>
+          </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+          <div class="contact-availability">
+            <div class="availability-dot"></div>
+            <span>Currently available for new projects</span>
+          </div>
+        </div>
 
+        <!-- Right — form -->
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <form id="contact-form" action="https://formspree.io/f/xjgjrvyk" method="POST">
+
+            <div class="form-field">
+              <label for="cf-name">Full Name</label>
+              <div class="field-input-wrap">
+                <i class="fas fa-user field-icon"></i>
+                <input type="text" id="cf-name" name="name" placeholder="e.g. Ian Ackerman" required autocomplete="name" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="cf-email">Email Address</label>
+              <div class="field-input-wrap">
+                <i class="fas fa-envelope field-icon"></i>
+                <input type="email" id="cf-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="cf-phone">Phone Number</label>
+              <div class="field-input-wrap">
+                <i class="fas fa-phone field-icon"></i>
+                <input type="tel" id="cf-phone" name="phone" placeholder="+256 700 000 000" autocomplete="tel" required/>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="cf-gender">Gender</label>
+              <div class="field-input-wrap field-select-wrap">
+                <i class="fas fa-venus-mars field-icon"></i>
+                <select id="cf-gender" name="gender" required>
+                  <option value="" disabled selected>Select your gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+                <i class="fas fa-chevron-down select-arrow"></i>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="cf-service">Service Interested In</label>
+              <div class="field-input-wrap field-select-wrap">
+                <i class="fas fa-briefcase field-icon"></i>
+                <select id="cf-service" name="service" required>
+                  <option value="" disabled selected>Choose a service</option>
+                  <option value="Software Development">Software Development</option>
+                  <option value="Website Development">Website Development</option>
+                  <option value="Digital Marketing">Digital Marketing</option>
+                  <option value="Tech Support">Tech Support</option>
+                  <option value="Coding Mentorship">Coding Mentorship</option>
+                </select>
+                <i class="fas fa-chevron-down select-arrow"></i>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="cf-message">Your Message</label>
+              <div class="field-input-wrap field-textarea-wrap">
+                <i class="fas fa-comment-dots field-icon field-icon-top"></i>
+                <textarea id="cf-message" name="message" placeholder="Tell me about your project or what you need help with..." required rows="5"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="form-submit-btn" id="submit-btn">
+              <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            </button>
+
+            <div class="form-success" id="form-success" style="display:none;">
+              <i class="fas fa-check-circle"></i>
+              <span>Message sent! I'll get back to you within 24 hours.</span>
+            </div>
+
+            <div class="form-error" id="form-error" style="display:none;">
+              <i class="fas fa-exclamation-circle"></i>
+              <span>Something went wrong. Please try again or WhatsApp me directly.</span>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-logo">Ian-<span class="accent">Ackerman</span></div>
+
+    <!-- Same animated social icons as hero section -->
+    <div class="footer-socials">
+      <a href="https://ianackerman5000" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://instagram.com/ianackerman447" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/256777905801" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://x.com/@IanMujuni" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      <a href="mujuni444ian@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <div class="footer-copy">© 2026 Ian-Ackerman. Building the Future Today</div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navOverlay = document.getElementById('nav-overlay');
+    const mobileNavLinks = document.querySelectorAll('#mobile-nav-drawer a');
+
+    function openNav() { document.body.classList.add('nav-open'); }
+    function closeNav() { document.body.classList.remove('nav-open'); }
+
+    hamburgerBtn.addEventListener('click', function() {
+      if (document.body.classList.contains('nav-open')) { closeNav(); } else { openNav(); }
+    });
+    navOverlay.addEventListener('click', closeNav);
+    mobileNavLinks.forEach(function(link) { link.addEventListener('click', closeNav); });
+
+    new Typed('#typed', {
+      strings: ['Software Developer', 'Digital Marketer', 'Coding Mentor', 'Tech Support Expert'],
+      typeSpeed: 60,
+      backSpeed: 35,
+      backDelay: 1500,
+      loop: true
+    });
+
+    const pc = document.getElementById('particles-container');
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      const size = 4 + Math.random() * 6;
+      p.style.width = size + 'px';
+      p.style.height = size + 'px';
+      p.style.animationDuration = (8 + Math.random() * 10) + 's';
+      p.style.animationDelay = (Math.random() * 8) + 's';
+      p.style.opacity = 0.2 + Math.random() * 0.4;
+      pc.appendChild(p);
+    }
+
+    const orbs = document.querySelectorAll('.glow-orb');
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+      orbs.forEach((orb, i) => {
+        const factor = (i + 1) * 0.5;
+        orb.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+      });
+    });
+
+    setTimeout(function() {
+      var els = document.querySelectorAll('.stat-number');
+      els.forEach(function(el) {
+        var target = parseInt(el.getAttribute('data-target'), 10);
+        var suffix = el.getAttribute('data-suffix') || '';
+        var start = null;
+        function tick(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / 2000, 1);
+          el.textContent = Math.floor((1 - Math.pow(1-p,3)) * target) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }, 1000);
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(l => {
+            l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    sections.forEach(s => navObserver.observe(s));
+
+    VanillaTilt.init(document.querySelectorAll('.tilt-card'), {
+      max: 8, speed: 400, glare: true, 'max-glare': 0.15
+    });
+
+    /* ===== CONTACT FORM AJAX ===== */
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      btnText.style.display = 'none';
+      btnLoading.style.display = 'inline-flex';
+      submitBtn.disabled = true;
+      formSuccess.style.display = 'none';
+      formError.style.display = 'none';
+
+      try {
+        const data = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+          formSuccess.style.display = 'flex';
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          formError.style.display = 'flex';
+        }
+      } catch (err) {
+        formError.style.display = 'flex';
+      } finally {
+        btnText.style.display = 'inline-flex';
+        btnLoading.style.display = 'none';
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
 </body>
 </html>
